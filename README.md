@@ -8,10 +8,10 @@
 ## 📸 Demo
 
 ### Dashboard Overview
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshot/dashboard.png)
 
 ### Explainable AI — Agent Reasoning
-![Explain](./screenshots/explain.png)
+![Explain](./screenshot/explain.png)
 
 ---
 
