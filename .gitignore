@@ -1,0 +1,22 @@
+cat > .gitignore << 'EOF'
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+
+# React / Node
+portfolio-dashboard/node_modules/
+portfolio-dashboard/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+EOF
