@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🏦 Portfolio Health Agent
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Agentic AI for Proactive Portfolio Management with Explainable Autonomy
+> Built as a working prototype for **DMP 2026** — Mifos Initiative Issue [#2](https://github.com/openMF/mifos-x-ai-agentic-framework/issues/2)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📸 Demo
 
-### `npm start`
+### Dashboard Overview
+![Dashboard](./screenshots/dashboard.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Explainable AI — Agent Reasoning
+![Explain](./screenshots/explain.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎯 What This Does
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This prototype is the foundation of a full **Portfolio Health Agent** that:
 
-### `npm run build`
+- 🔗 Connects to **Mifos X API** and fetches live loan accounts
+- 📊 Scores each loan on a **risk scale of 0–10**
+- 🤖 Recommends actions automatically:
+  - 🟢 Low risk → Send payment reminder
+  - 🟡 Medium risk → Schedule follow-up call
+  - 🔴 High risk → Escalate to loan officer
+- 💬 **Explains every decision** in plain English (Explainable AI)
+- 🖥️ Live React dashboard for loan officers to review agent decisions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Layer | Technology |
+|---|---|
+| AI Agent (planned) | Python + LangChain + Ollama |
+| Backend API | FastAPI (Python) |
+| Frontend | React.js |
+| Data Source | Mifos X REST API |
+| Explainability | Rule-based reasoning engine |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Run Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the repo
+```bash
+git clone https://github.com//portfolio-health-agent
+cd portfolio-health-agent
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Start the Backend
+```bash
+python -m venv venv
+source venv/bin/activate        
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+pip install -r requirements.txt
+uvicorn api:app --reload
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Backend runs at: `http://localhost:8000`
+API docs at: `http://localhost:8000/docs`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Start the Frontend
+```bash
+cd portfolio-dashboard
+npm install
+npm start
+```
 
-### Code Splitting
+Frontend runs at: `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📁 Project Structure
